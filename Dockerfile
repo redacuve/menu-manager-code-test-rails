@@ -8,12 +8,11 @@ COPY Gemfile Gemfile.lock ./
 RUN echo 'gem: --no-rdoc --no-ri' >> "$HOME/.gemrc"
 RUN bundle install
 
-COPY . .
-
 ENV RAILS_ENV development
 
-RUN chmod +x ./docker-entrypoint.sh
-ENTRYPOINT ["./docker-entrypoint.sh"]
+COPY docker-entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/docker-entrypoint.sh
+ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
 EXPOSE 3000
 
 # Configure the main process to run when running the image
