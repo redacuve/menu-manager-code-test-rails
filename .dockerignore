@@ -1,0 +1,31 @@
+.git
+.gitignore
+README.md
+
+#
+# OS X
+#
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon must end with two \r
+Icon
+# Thumbnails
+._*
+
+#
+# Rails
+#
+.env
+.env.sample
+log
+tmp
+coverage/
+**.orig
+
+.bundle
+
+.ruby-version
+.ruby-gemset
+
+.rvmrc
