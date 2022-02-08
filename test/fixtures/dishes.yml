@@ -1,11 +1,26 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  price: 1
+soup:
+  name: Soup
+  price: 3
   menu_id: 1
 
-two:
-  name: MyString
-  price: 1
-  menu_id: 1
+salad:
+  name: Salad
+  price: 5
+  menu_id: 2
+
+dairy:
+  name: Dairy
+  price: 7
+  menu_id: 3
+
+tacos:
+  name: Tacos
+  price: 11
+  menu_id: 3
+
+gazpacho:
+  name: Gazpacho
+  price: 9
+  menu_id: 3
