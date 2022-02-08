@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-  get 'menus/index'
-  get 'menus/new'
-  get 'menus/create'
-  get 'dishes/index'
-  get 'dishes/new'
-  get 'dishes/create'
+  resources :menus, only: [:index, :new, :create]
+  resources :dishes, only: [:index, :new, :create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

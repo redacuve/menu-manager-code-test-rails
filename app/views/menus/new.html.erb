@@ -1,2 +1,9 @@
-<h1>Menus#new</h1>
-<p>Find me in app/views/menus/new.html.erb</p>
+<h1>New menu</h1>
+
+<%= render "form", menu: @menu %>
+
+<br>
+
+<div>
+  <%= link_to "Back to menus", root_path %>
+</div>

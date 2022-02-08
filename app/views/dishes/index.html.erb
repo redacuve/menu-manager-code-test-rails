@@ -1,2 +1,11 @@
-<h1>Dishes#index</h1>
-<p>Find me in app/views/dishes/index.html.erb</p>
+<p style="color: green"><%= notice %></p>
+
+<h1>Dishes</h1>
+
+<div id="dishes">
+  <% @dishes.each do |dish| %>
+    <%= render dish %>
+  <% end %>
+</div>
+
+<%= link_to "New dish", new_dish_path %>
