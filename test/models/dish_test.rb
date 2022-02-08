@@ -4,6 +4,8 @@ class DishTest < ActiveSupport::TestCase
   def setup
     @menu = menus(:dinner)
     @dish = @menu.dish.build(name: 'pizza', price: 15)
+    @first_menu = menus(:starters)
+    @dish_on_fm = @first_menu.dish.build(name: 'spring rolls', price: 74)
   end
 
   test "dish should be valid" do
@@ -38,5 +40,19 @@ class DishTest < ActiveSupport::TestCase
     duplicate_dish = @dish.dup
     @dish.save
     assert_not duplicate_dish.valid?
+  end
+
+  test "the sum of the prices of the meny and the price of the dish can be under 77" do
+    @dish_on_fm.price = 14
+    assert @dish_on_fm.valid?
+  end
+
+  test "the sum of the prices of the menu and the price of the dish can be above 77" do
+    @dish_on_fm.price = 77
+    assert @dish_on_fm.valid?
+  end
+
+  test "the sum of the prices of the menu and the price of the dish cannot be 77" do
+    assert_not @dish_on_fm.valid?
   end
 end

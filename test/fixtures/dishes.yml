@@ -3,24 +3,24 @@
 soup:
   name: Soup
   price: 3
-  menu_id: 1
+  menu: starters
 
 salad:
   name: Salad
   price: 5
-  menu_id: 2
+  menu: mains
 
 dairy:
   name: Dairy
   price: 7
-  menu_id: 3
+  menu: dinner
 
 tacos:
   name: Tacos
   price: 11
-  menu_id: 3
+  menu: dinner
 
 gazpacho:
   name: Gazpacho
   price: 9
-  menu_id: 3
+  menu: dinner
