@@ -3,7 +3,7 @@ require "test_helper"
 class DishTest < ActiveSupport::TestCase
   def setup
     @menu = menus(:dinner)
-    @dish = @menu.dishes.build(name: 'pizza', price: 15)
+    @dish = @menu.dish.build(name: 'pizza', price: 15)
   end
 
   test "dish should be valid" do
@@ -35,7 +35,7 @@ class DishTest < ActiveSupport::TestCase
   end
 
   test "name must be unique" do
-    duplicate_dish = @dish
+    duplicate_dish = @dish.dup
     @dish.save
     assert_not duplicate_dish.valid?
   end
