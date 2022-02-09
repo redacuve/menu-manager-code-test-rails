@@ -1,4 +1,5 @@
 class DishesController < ApplicationController
+  before_action :set_menus, only: %i[ new create ]
   def index
     @dishes = Dish.all
   end
@@ -9,7 +10,6 @@ class DishesController < ApplicationController
 
   def create
     @dish = Dish.new(dish_params)
-
     respond_to do |format|
       if @dish.save
         format.html { redirect_to dishes_url, notice: "Dish was successfully created." }
@@ -24,5 +24,9 @@ class DishesController < ApplicationController
   private
   def dish_params
     params.require(:dish).permit(:name, :price, :menu_id)
+  end
+
+  def set_menus
+    @menus = Menu.all
   end
 end

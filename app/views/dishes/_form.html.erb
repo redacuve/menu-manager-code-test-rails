@@ -21,9 +21,10 @@
     <%= form.number_field :price %>
   </div>
 
+
   <div>
     <%= form.label :menu_id, style: "display: block" %>
-    <%= form.number_field :menu_id %>
+    <%= form.select :menu_id, options_from_collection_for_select(@menus, "id", "name") %>
   </div>
 
   <div>
