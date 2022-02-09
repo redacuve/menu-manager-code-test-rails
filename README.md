@@ -75,19 +75,26 @@ Clone or fork the <a href="https://github.com/redacuve/menu-manager-code-test-ra
 
 Note* Ruby and Rails needs to be installed to run the code, check [here](https://www.ruby-lang.org/en/documentation/installation/) and [here](https://guides.rubyonrails.org/getting_started.html) for further steps.
 
+## TEST
+
+To running the test simply run the command
+  ```
+  $ rails tests
+  ```
+
 <!-- HOW IT WORKS -->
 ## How it Works
 <div align="center">
 <img src="1.png" style="center" width="300">
 </div>
 
-* You can Add a new Menu.
+* You can Add a new Menu. Endpoint: /menus/new
 
 <div align="center">
 <img src="2.png" style="center" width="300">
 </div>
 
-* With at least one Menu, you can add Dished to the menus.
+* With at least one Menu, you can add Dished to the menus. Endpoint: /dishes/new
 
 <div align="center">
 <img src="3.png" style="center" width="300">
@@ -100,6 +107,12 @@ Note* Ruby and Rails needs to be installed to run the code, check [here](https:/
 </div>
 
 * Also you cannot add a Dish if the price of the dishes including the desire one to be add is exactly 77.
+
+<div align="center">
+<img src="5.png" style="center" width="300">
+</div>
+
+* The root path is where you can see the information in JSON.
 
 ## Using Docker    
 ### Initial setup
